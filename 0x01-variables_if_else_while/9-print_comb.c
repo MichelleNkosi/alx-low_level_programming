@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible combinations of single-digit numbers using putchar
+ * main prints all possible combinations of single-digit numbers using putchar
  *
  * Return: Always 0 (Success)
  */
