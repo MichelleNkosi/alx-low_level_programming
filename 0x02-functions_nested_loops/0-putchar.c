@@ -1,23 +1,7 @@
-#include <stdio.h>
+#include "main.h"
+#include <unistd.h>  // Include for the write function
 
-/**
- * _putchar - Prints a character to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-    return putchar(c);
-}
-
-/**
- * main - Entry point of the program
- *
- * Description: Prints "_putchar" followed by a newline.
- * Return: Always 0 (success)
- */
+/* Main function */
 int main(void)
 {
     _putchar('_');
@@ -31,4 +15,10 @@ int main(void)
     _putchar('\n');
 
     return (0);
+}
+
+/* _putchar function definition */
+int _putchar(char c)
+{
+    return write(1, &c, 1); /* write to standard output */
 }
