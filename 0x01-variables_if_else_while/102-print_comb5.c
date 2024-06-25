@@ -14,18 +14,18 @@ for (num1 = 0; num1 <= 98; num1++)
 {
 for (num2 = num1 + 1; num2 <= 99; num2++)
 {
-            /* Print first number */
+/* Print first number */
 putchar(num1 / 10 + '0');
 putchar(num1 % 10 + '0');
 
-            /* Print space */
+/* Print space */
 putchar(' ');
 
-            /* Print second number */
+/* Print second number */
 putchar(num2 / 10 + '0');
 putchar(num2 % 10 + '0');
 
-            /* Print comma and space if not the last pair */
+/* Print comma and space if not the last pair */
 if (!(num1 == 98 && num2 == 99))
 {
 putchar(',');
@@ -34,7 +34,7 @@ putchar(' ');
 }
 }
 
-    /* Print newline at the end */
+/* Print newline at the end */
 putchar('\n');
 
 return (0);
