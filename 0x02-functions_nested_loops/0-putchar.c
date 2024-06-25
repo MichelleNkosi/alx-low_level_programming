@@ -1,6 +1,6 @@
 #include "main.h"
 
-/* 
+/*
  * main - Entry point of the program
  *
  * Return: Always 0 (success)
@@ -17,5 +17,5 @@ _putchar('a');
 _putchar('r');
 _putchar('\n');
 
-    return (0);
+return (0);
 }
