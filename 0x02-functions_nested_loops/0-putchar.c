@@ -1,5 +1,5 @@
 #include "main.h"
-#include <unistd.h>  // Include for the write function
+#include <unistd.h>  /* Include for the write function */
 
 /* Main function */
 int main(void)
