@@ -3,6 +3,9 @@
 /*
  * main - Entry point of the program
  *
+ * This function prints "_putchar" followed by a new line using multiple
+ * _putchar function calls.
+ *
  * Return: Always 0 (success)
  */
 int main(void)
