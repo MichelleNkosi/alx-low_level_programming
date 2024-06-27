@@ -11,13 +11,16 @@ long largest_prime_factor(long num)
 long largest = -1;
 int i;
 
-while (num % 2 == 0) {
+while (num % 2 == 0)
+{
 largest = 2;
 num /= 2;
 }
 
-for (i = 3; i <= sqrt(num); i += 2) {
-while (num % i == 0) {
+for (i = 3; i <= sqrt(num); i += 2)
+{
+while (num % i == 0)
+{
 largest = i;
 num /= i;
 }
@@ -28,6 +31,11 @@ largest = num;
 
 return (largest);
 }
+
+/**
+ * main - Entry point of the program
+ * Return: Always 0
+ */
 
 int main(void)
 {
