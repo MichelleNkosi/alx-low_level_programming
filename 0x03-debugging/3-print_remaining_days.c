@@ -9,7 +9,6 @@
  * @year: year
  * Return: void
  */
-
 void print_remaining_days(int month, int day, int year)
 {
 int leap;
@@ -23,18 +22,30 @@ day++;
 
 switch (month - 1)
 {
-case 12: day += 31;
-case 11: day += 30;
-case 10: day += 31;
-case 9: day += 30;
-case 8: day += 31;
-case 7: day += 31;
-case 6: day += 30;
-case 5: day += 31;
-case 4: day += 30;
-case 3: day += 31;
-case 2: day += 28;
-case 1: day += 31;
+case 12:
+day += 31;
+case 11:
+day += 30;
+case 10:
+day += 31;
+case 9:
+day += 30;
+case 8:
+day += 31;
+case 7:
+day += 31;
+case 6:
+day += 30;
+case 5:
+day += 31;
+case 4:
+day += 30;
+case 3:
+day += 31;
+case 2:
+day += 28;
+case 1:
+day += 31;
 }
 
 if (!leap && month >= 3)
