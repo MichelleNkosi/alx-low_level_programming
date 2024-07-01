@@ -25,11 +25,11 @@ if (result > (2147483647 / 10) || (result == 2147483647 / 10 && (s[i] - '0') > 7
 {
 if (sign == 1)
 {
-return (2147483647); // INT_MAX
+return (2147483647);
 }
 else
 {
-return (-2147483648); // INT_MIN
+return (-2147483648);
 }
 }
 result = result * 10 + (s[i] - '0');
