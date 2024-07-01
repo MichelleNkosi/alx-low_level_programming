@@ -10,9 +10,7 @@ int _atoi(char *s)
 {
 int i = 0;
 int sign = 1;
-int result = 0;
-
-/* Skip all characters that are not digits or signs */
+unsigned int result = 0;
 while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
 {
 if (s[i] == '-')
@@ -21,13 +19,22 @@ sign = -sign;
 }
 i++;
 }
-
-/* Convert the characters to integers */
 while (s[i] != '\0' && (s[i] >= '0' && s[i] <= '9'))
 {
+if (result > (2147483647 / 10) ||
+(result == 2147483647 / 10 && (s[i] - '0') > 7))
+{
+if (sign == 1)
+{
+return (2147483647);
+}
+else
+{
+return (-2147483648);
+}
+}
 result = result * 10 + (s[i] - '0');
 i++;
 }
-
-return (result * sign);
+return (result *sign);
 }
