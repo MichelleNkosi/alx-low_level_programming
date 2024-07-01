@@ -26,9 +26,9 @@ int divisor = 1000000000;
 while (divisor > num)
 divisor /= 10;
 while (divisor >= 1)
-{_putchar((num / divisor) + '0');
+{_putchar((num / divisor) +'0');
 num %= divisor;
-divisor /= 10;}
+divisor /= 10; }
 }
 if (i != n - 1)
 {
