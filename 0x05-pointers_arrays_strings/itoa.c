@@ -1,50 +1,40 @@
 #include "main.h"
 
 /**
- * _itoa - converts an integer to a string
- * @n: the integer to convert
- * @str: the buffer to store the converted string
+ * _atoi - converts a string to an integer.
+ * @s: the string to convert
+ *
+ * Return: the integer value of the string, or 0 if no numbers are found
  */
-void _itoa(int n, char *str)
+int _atoi(char *s)
 {
-    int i = 0, j, temp;
-    int is_negative = 0;
+int i = 0;
+int sign = 1;
+unsigned int result = 0;
+while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
+{
+if (s[i] == '-')
+{
+sign = -sign;
+}
+i++;
+}
+while (s[i] != '\0' && (s[i] >= '0' && s[i] <= '9'))
+{
 
-    /* Handle 0 explicitly */
-    if (n == 0)
-    {
-        str[i++] = '0';
-        str[i] = '\0';
-        return;
-    }
-
-    /* Handle negative numbers */
-    if (n < 0)
-    {
-        is_negative = 1;
-        n = -n;
-    }
-
-    /* Process individual digits */
-    while (n != 0)
-    {
-        str[i++] = (n % 10) + '0';
-        n /= 10;
-    }
-
-    /* Add negative sign */
-    if (is_negative)
-    {
-        str[i++] = '-';
-    }
-
-    str[i] = '\0';
-
-    /* Reverse the string */
-    for (j = 0, i--; j < i; j++, i--)
-    {
-        temp = str[j];
-        str[j] = str[i];
-        str[i] = temp;
-    }
+if (result > (2147483647 / 10) || (result == 2147483647 / 10 && (s[i] - '0') > 7))
+{
+if (sign == 1)
+{
+return (2147483647); // INT_MAX
+}
+else
+{
+return (-2147483648); // INT_MIN
+}
+}
+result = result * 10 + (s[i] - '0');
+i++;
+}
+return (result * sign);
 }
