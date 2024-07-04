@@ -15,8 +15,8 @@ int i;
 /* Find the length of the destination string */
 while (dest[dest_len] != '\0')
 {
- dest_len++;
- }
+dest_len++;
+}
 
 /* Append the source string to the destination string */
 for (i = 0; src[i] != '\0'; i++)
