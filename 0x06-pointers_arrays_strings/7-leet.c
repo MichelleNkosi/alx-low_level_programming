@@ -9,7 +9,6 @@
 char *leet(char *str)
 {
 int i = 0;
-    
 while (str[i])
 {
 if (str[i] == 'a' || str[i] == 'A')
