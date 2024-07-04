@@ -8,7 +8,6 @@
  */
 char *cap_string(char *str)
 {
-char separators[] = " \t\n,;.!?\"(){}";
 int i = 0;
 int capitalize = 1;
 
