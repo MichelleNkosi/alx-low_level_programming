@@ -11,5 +11,7 @@ char *cap_string(char *str);
 char *leet(char *str);
 void print_array(int *a, int n);
 char *rot13(char *str);
+int _putchar(char c);
+void print_number(int n);
 
 #endif /* MAIN_H */
