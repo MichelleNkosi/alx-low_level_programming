@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - Fills the first n bytes of the memory area pointed to by s with the constant byte b.
+ * _memset - Fills the first n bytes of the memory area.
  * @s: Pointer to the memory area.
  * @b: Constant byte to fill.
  * @n: Number of bytes to be filled.
