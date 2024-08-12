@@ -13,31 +13,30 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-    int fd, length = 0, written;
+int fd, length = 0, written;
 
-    if (filename == NULL)
-        return (-1);
+if (filename == NULL)
+return (-1);
 
     /* Open file with O_CREAT, O_WRONLY and O_TRUNC flags, set permissions to rw------- */
-    fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
-    if (fd == -1)
-        return (-1);
-
-    if (text_content != NULL)
-    {
+fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+if (fd == -1)
+return (-1);
+if (text_content != NULL)
+{
         /* Calculate the length of text_content */
-        while (text_content[length])
-            length++;
+while (text_content[length])
+length++;
 
         /* Write the text_content to the file */
-        written = write(fd, text_content, length);
-        if (written == -1)
-        {
-            close(fd);
-            return (-1);
-        }
-    }
+written = write(fd, text_content, length);
+if (written == -1)
+{
+close(fd);
+return (-1);
+}
+}
 
-    close(fd);
-    return (1);
+close(fd);
+return (1);
 }
